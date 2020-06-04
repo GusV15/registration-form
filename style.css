@@ -62,13 +62,21 @@ p{
     margin-bottom: 30px;
     color: #FAF8FF;
     font-size: 1rem;
-    font-weight: 100;
     letter-spacing: 1px;
-    background: rgb(84, 83, 161);
+    background: rgb(96, 95, 180);
     font-weight: 500;
     border-radius: 10px;
     box-shadow: 0px 8px 0px #DB6767;
     border: 0.1px solid rgb(56, 55, 122);
+    outline: none;
+}
+
+.registration .button-discount:hover {
+    background: rgb(73, 72, 155);
+    font-weight: bold;
+    border: 0.1px solid rgb(40, 39, 97);
+    cursor: pointer;
+    transition: all 2s, font-weight 0.5s;
 }
 
 button span {
@@ -87,15 +95,16 @@ button span {
 }
 
 form input {
-    width: 82.8%;
+    width: 77.8%;
     height: 55px;
-    margin: 20px 44px 0px 44px;
+    margin: 20px 20px 0px 43px;
     padding-left: 30px;
     color: #46454A;
     font-weight: bold;
     font-size: 0.9rem;
     border-radius: 5px;
     border: 1.4px solid #E1E1E1;
+    outline: none;
 }
 
 form input:first-child {
@@ -106,7 +115,8 @@ form input:focus {
     color: #46454A;
     font-weight: bold;
     font-size: 0.9rem;
-    border: 1.4px solid rgb(53, 47, 47);
+    border: 1.4px solid rgb(226, 157, 157);
+    transition: all 0.5s;
 }
 
 input::-webkit-input-placeholder {
@@ -134,6 +144,17 @@ input:focus::-webkit-input-placeholder {
     border: 0.5px solid rgb(50, 177, 120);
     border-radius: 5px;
     box-shadow: 0px 3px 0px rgb(50, 177, 120);
+    outline: none;
+}
+
+.form-registration .button-form:hover {
+    font-weight:bold;
+    letter-spacing: 0.5px;
+    background: rgb(49, 173, 117);
+    border: 0.5px solid rgb(43, 160, 107);
+    box-shadow: 0px 3px 0px rgb(55, 195, 132);
+    transition: all 2s;
+    
 }
 
 .form-registration p {
