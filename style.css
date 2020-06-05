@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-body {
-    width: 1440px;
-    height: 800px;
-    margin: auto;
+html, body {
+    width: 100vw;
     background-image:  url("./images/bg-intro-desktop.png");  
     background-color: #FF7978;
     font-family: 'Poppins', sans-serif;
@@ -14,7 +12,8 @@ body {
 
 .wrapper {
     width: 84%;
-    height: 650px;
+    height: 750px;
+    margin: 20px;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -23,34 +22,33 @@ body {
 
 .header {
     width: 48%;
-    height: 70%;
+    height: 605px;
     margin: 20px;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
 }
 
-h1 {
-    margin-left: 30px;
+.header h1 {
     margin-bottom: 10px;
     padding: 0;
     font-size: 3rem;
     font-weight: bold;
     color: #FFFFFF;
     text-align: left;
-    line-height: 50px;
+    line-height: 55px;
 }
 
-p{ 
-    margin-left: 30px;
+.header p{ 
     color: #FFFFFF;
     font-size: 1rem;
     font-weight: 500;
+    line-height: 25px;
 }
 
 .registration {
     width: 48%;
-    height: 570px;
+    height: 605px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -88,17 +86,27 @@ button span {
 
 .form-registration {
     width: 96.5%;
-    height: 475px;
+    height: 478px;
     background: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0px 8px 0px #DB6767;
+    box-sizing: border-box;
+}
+
+.form-registration form {
+    width: 100%;
+    height: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 form input {
-    width: 77.8%;
+    width: 82%;
     height: 55px;
-    margin: 20px 20px 0px 43px;
-    padding-left: 30px;
+    padding-left: 35px;
+    margin-top: 20px;
     color: #46454A;
     font-weight: bold;
     font-size: 0.9rem;
@@ -115,7 +123,7 @@ form input:focus {
     color: #46454A;
     font-weight: bold;
     font-size: 0.9rem;
-    border: 1.4px solid rgb(226, 157, 157);
+    border: 1.4px solid rgb(73, 72, 155);
     transition: all 0.5s;
 }
 
@@ -132,9 +140,11 @@ input:focus::-webkit-input-placeholder {
 }
 
 .form-registration .button-form {
-    width: 83.8%;
+    width: 89%;
     height: 55px;
-    margin: 20px 44px 0px 44px;
+    margin: 20px auto;
+    margin-bottom: 8px;
+    display: block;
     font-size: 0.9rem;
     color: #FAF8FF;
     font-weight:600;
@@ -154,12 +164,13 @@ input:focus::-webkit-input-placeholder {
     border: 0.5px solid rgb(43, 160, 107);
     box-shadow: 0px 3px 0px rgb(55, 195, 132);
     transition: all 2s;
-    
+    cursor: pointer;
 }
 
 .form-registration p {
     text-align: center;
-    font-size: 0.75rem;
+    margin: 0;
+    font-size: 0.7rem;
     font-weight: 400;
     color: rgb(200, 199, 209);
 }
@@ -167,6 +178,131 @@ input:focus::-webkit-input-placeholder {
 p span {
     color: #ED858A;
     font-weight: bold;
+}
+
+/* Responsive Design with Media Query´s */
+
+@media screen and (max-width: 1000px) {
+    html, body{
+        width: 100vw;
+    }
+    .wrapper {
+        width: 100%;
+        margin-top: 30px;
+        min-height:820px;
+    }
+    .header {
+        width: 70%;
+        height: 180px;
+        text-align: center;
+    }
+    .header h1 {
+        font: 0.8rem;
+        text-align: center;
+    }
+    .header p {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+    .registration {
+        width: 70%;
+    }
+    .registration .button-discount {
+        margin-bottom: 0px;
+    }    
+    .form-registration {
+        align-items: center;
+    }
+    .form-registration p {
+        padding: 0 20px;
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .header {
+        width: 85%;
+        height: 250px;
+        align-items: center;
+    }
+    .header h1 {
+        font-size: 2.6rem;
+    }
+    .registration {
+        width: 85%;
+    }
+    .form-registration p {
+        padding: 0 40px;
+        font-size: 0.8rem;
+    }
+    .registration .button-discount,
+    .registration span{
+        font-size: 0.9rem;
+    }
+    .form-registration span {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .header {
+        width: 90%;
+        height: 350px;
+    }
+    .header h1 {
+        font-size: 1.5rem;
+        line-height: 40px;
+    }
+    .header p {
+        margin-bottom: 20px;
+    }
+    .registration {
+        width: 90%;
+    }
+    .form-registration p {
+        padding: 0 40px;
+        font-size: 0.6rem;
+    }
+    form input {
+        width: 75%;
+    }
+    .registration .button-discount,
+    .registration span{
+        font-size: 0.9rem;
+    }
+    .form-registration span {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .wrapper{
+        margin: 0;
+        width: 100vw;
+    }
+    .header {
+        width: 90%;
+        height: 280px;
+    }
+    .header h1 {
+        font-weight: 600;
+    }
+    .header p {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+    }
+    .registration .button-discount {
+        height: 85px;
+        padding: 0 40px;
+        line-height: 20px;
+        font-size: 0.9rem;
+        font-weight: 100;
+    }
+    .form-registration .button-form {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }    
 }
 
 
