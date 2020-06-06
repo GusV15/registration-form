@@ -4,27 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Intro component with sign up form</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style> -->
+    <script src="https://kit.fontawesome.com/26fd60cc27.js"></script>
+    <script defer src="/your-path-to-fontawesome/js/all.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -42,10 +32,27 @@
         </button>
         <div class="form-registration">
           <form>
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
-            <input type="email" placeholder="Email Address" />
-            <input type="password" placeholder="Password" />
+            <div class="icon">
+              <input type="text" placeholder="First Name" class="first-name" />
+              <i class="fas fa-exclamation-circle"></i>
+              <p>First Name cannot be empty</p>
+            </div>
+            <div  class="icon">
+              <input type="text" placeholder="Last Name" class="last-Name" />
+              <i class="fas fa-exclamation-circle"></i>
+              <p>Last Name cannot be empty</p>
+            </div>
+            <div class="icon">
+              <input type="email" placeholder="Email Address" class="email" />
+              <i class="fas fa-exclamation-circle"></i>
+              <p>Looks like this is not an email</p>
+            </div>
+            <div class="icon">
+              <input type="password" placeholder="Password" name="password" />
+              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+
+              <p>Password cannot be empty</p>
+            </div>
           </form>
           <button class="button-form">
             Claim your free trial
@@ -57,5 +64,6 @@
         </div>
       </div>
     </div>
+    <scrip src="./index.js" type="text/javascript"></scrip>
   </body>
 </html>

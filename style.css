@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+:root {
+    --primary-button: hsl(154, 59%, 51%);
+    --secondary-button: hsl(248, 32%, 49%);
+    --input-error: #F77D78;
+    --input: hsl(246, 25%, 77%);
+    --input-focus: hsl(249, 10%, 26%) ;
+}
+
 html, body {
     width: 100vw;
     background-image:  url("./images/bg-intro-desktop.png");  
@@ -61,7 +69,7 @@ html, body {
     color: #FAF8FF;
     font-size: 1rem;
     letter-spacing: 1px;
-    background: rgb(96, 95, 180);
+    background: var(--secondary-button);
     font-weight: 500;
     border-radius: 10px;
     box-shadow: 0px 8px 0px #DB6767;
@@ -84,9 +92,10 @@ button span {
     font-weight: bold;
 }
 
+
 .form-registration {
     width: 96.5%;
-    height: 478px;
+    height: 545px;
     background: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0px 8px 0px #DB6767;
@@ -95,54 +104,73 @@ button span {
 
 .form-registration form {
     width: 100%;
-    height: 340px;
+    height: 380px;
+}
+
+.form-registration form .icon {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
 }
 
+.icon {
+    position: relative;
+}
+.icon i {
+    position: absolute;
+    color: var(--input-error);
+    font-size: 27px;
+    bottom: 18px;
+    right: 55px;
+} 
+
+.icon p {
+    position: absolute;
+    text-align: right;
+    margin: 0;
+    color: var(--input-error);
+    bottom: -17px;
+    right: 30px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    font-style: italic;
+    text-align: right;
+}
+
 form input {
     width: 82%;
     height: 55px;
     padding-left: 35px;
-    margin-top: 20px;
-    color: #46454A;
+    margin-top: 40px;
+    color: var(--input);
     font-weight: bold;
     font-size: 0.9rem;
     border-radius: 5px;
-    border: 1.4px solid #E1E1E1;
+    border: 1.5px solid #D18E8D;
     outline: none;
 }
 
-form input:first-child {
+form div:first-child input {
     margin-top: 40px;
 }
 
 form input:focus {
-    color: #46454A;
-    font-weight: bold;
-    font-size: 0.9rem;
-    border: 1.4px solid rgb(73, 72, 155);
+    color: var(--input-focus);
+    border: 1.5px solid var(--secondary-button);
     transition: all 0.5s;
 }
 
-input::-webkit-input-placeholder {
-    color: rgb(123, 122, 128);
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-input:focus::-webkit-input-placeholder {
-    color: #46454A;
-    font-weight: bold;
-    font-size: 0.9rem;
+form input:focus ~ i,
+form input:focus ~ p{
+    display: none;
 }
 
 .form-registration .button-form {
+    position: relative;
     width: 89%;
     height: 55px;
-    margin: 20px auto;
+    margin: 58px auto;
     margin-bottom: 8px;
     display: block;
     font-size: 0.9rem;
@@ -150,7 +178,7 @@ input:focus::-webkit-input-placeholder {
     font-weight:600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    background: #37CC8A;
+    background: var(--primary-button);
     border: 0.5px solid rgb(50, 177, 120);
     border-radius: 5px;
     box-shadow: 0px 3px 0px rgb(50, 177, 120);
@@ -167,7 +195,7 @@ input:focus::-webkit-input-placeholder {
     cursor: pointer;
 }
 
-.form-registration p {
+.form-registration > p {
     text-align: center;
     margin: 0;
     font-size: 0.7rem;
@@ -182,14 +210,15 @@ p span {
 
 /* Responsive Design with Media Query´s */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1190px) {
     html, body{
         width: 100vw;
     }
     .wrapper {
         width: 100%;
         margin-top: 30px;
-        min-height:820px;
+        min-height:950px;
+        margin: 10px;
     }
     .header {
         width: 70%;
@@ -197,6 +226,7 @@ p span {
         text-align: center;
     }
     .header h1 {
+        margin: 0;
         font: 0.8rem;
         text-align: center;
     }
@@ -207,31 +237,65 @@ p span {
     .registration {
         width: 70%;
     }
+    .icon i {
+        position: absolute;
+        bottom: 18px;
+        right: 70px;
+    } 
+    
+    .icon p {
+        position: absolute;
+        bottom: -17px;
+        right: 53px;
+    }
     .registration .button-discount {
-        margin-bottom: 0px;
+        margin-bottom: 15px;
     }    
     .form-registration {
         align-items: center;
     }
-    .form-registration p {
+    .form-registration > p {
         padding: 0 20px;
         font-size: 0.6rem;
     }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 940px) {
+    icon i {
+        position: absolute;
+        bottom: 18px;
+        right: 20px;
+    } 
+
+    .icon p {
+        position: absolute;
+        bottom: -17px;
+        right: 40px;
+    }
+    form input {
+        width: 74%;
+    }
+    .form-registration .button-form {
+        position: relative;
+        width: 82%;
+    }
+}
+
+
+@media screen and (max-width: 605px) {
     .header {
         width: 85%;
         height: 250px;
         align-items: center;
     }
     .header h1 {
-        font-size: 2.6rem;
+        font-size: 2rem;
+        margin-bottom: 5px;
     }
     .registration {
         width: 85%;
     }
-    .form-registration p {
+    .form-registration > p {
         padding: 0 40px;
         font-size: 0.8rem;
     }
@@ -242,15 +306,22 @@ p span {
     .form-registration span {
         font-size: 0.6rem;
     }
+    form input {
+        width: 70%;
+    }
+    .form-registration .button-form {
+        position: relative;
+        width: 75%;
+    }
 }
 
-@media screen and (max-width: 455px) {
+@media screen and (max-width: 493px) {
     .header {
         width: 90%;
         height: 350px;
     }
     .header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 40px;
     }
     .header p {
@@ -259,11 +330,15 @@ p span {
     .registration {
         width: 90%;
     }
-    .form-registration p {
+    .form-registration > p {
         padding: 0 40px;
         font-size: 0.6rem;
     }
     form input {
+        width: 65%;
+    }
+    .form-registration .button-form {
+        position: relative;
         width: 75%;
     }
     .registration .button-discount,
@@ -303,6 +378,13 @@ p span {
         font-size: 0.9rem;
         font-weight: 400;
     }    
+    form input {
+        width: 55%;
+    }
+    .form-registration .button-form {
+        position: relative;
+        width: 65%;
+    }
 }
 
 
