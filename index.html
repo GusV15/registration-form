@@ -32,23 +32,23 @@
         </button>
         <div class="form-registration">
           <form>
-            <div class="icon">
-              <input type="text" placeholder="First Name" class="first-name" />
+            <div class="area-error">
+              <input onchange="validateInput()" type="text" placeholder="First Name" class="first-name" />
               <i class="fas fa-exclamation-circle"></i>
               <p>First Name cannot be empty</p>
             </div>
-            <div  class="icon">
-              <input type="text" placeholder="Last Name" class="last-Name" />
+            <div  class="area-error">
+              <input onchange='validateInput()' type="text" placeholder="Last Name" class="last-Name" />
               <i class="fas fa-exclamation-circle"></i>
               <p>Last Name cannot be empty</p>
             </div>
-            <div class="icon">
-              <input type="email" placeholder="Email Address" class="email" />
+            <div class="area-error">
+              <input onchange='validateInput()' type="email" placeholder="Email Address" class="email" />
               <i class="fas fa-exclamation-circle"></i>
               <p>Looks like this is not an email</p>
             </div>
-            <div class="icon">
-              <input type="password" placeholder="Password" name="password" />
+            <div class="area-error">
+              <input onchange='validateInput()' type="password" placeholder="Password" name="password" class="password"/>
               <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
 
               <p>Password cannot be empty</p>
@@ -64,6 +64,6 @@
         </div>
       </div>
     </div>
-    <scrip src="./index.js" type="text/javascript"></scrip>
+    <script src="./index.js" type="text/javascript"></script>
   </body>
 </html>

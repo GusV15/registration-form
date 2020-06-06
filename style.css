@@ -9,19 +9,19 @@
 }
 
 html, body {
-    width: 100vw;
     background-image:  url("./images/bg-intro-desktop.png");  
     background-color: #FF7978;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
 
 .wrapper {
     width: 84%;
-    height: 750px;
-    margin: 20px;
+    height: 46.875em;
+    margin: 1.25em;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -30,33 +30,33 @@ html, body {
 
 .header {
     width: 48%;
-    height: 605px;
-    margin: 20px;
+    height: 37.8125em;
+    margin: 1.25em;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
 }
 
 .header h1 {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     padding: 0;
     font-size: 3rem;
     font-weight: bold;
     color: #FFFFFF;
     text-align: left;
-    line-height: 55px;
+    line-height: 3.4375rem;
 }
 
 .header p{ 
     color: #FFFFFF;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 500;
-    line-height: 25px;
+    line-height: 1.5625em;
 }
 
 .registration {
     width: 48%;
-    height: 605px;
+    height: 37.8125em;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -64,16 +64,16 @@ html, body {
 
 .registration .button-discount {
     width: 96.5%;
-    height: 60px;
-    margin-bottom: 30px;
+    height: 3.75rem;
+    margin-bottom: 1.875rem;
     color: #FAF8FF;
     font-size: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     background: var(--secondary-button);
     font-weight: 500;
     border-radius: 10px;
-    box-shadow: 0px 8px 0px #DB6767;
-    border: 0.1px solid rgb(56, 55, 122);
+    box-shadow: 0px 0.5rem 0px #DB6767;
+    border: 0.0063rem solid rgb(56, 55, 122);
     outline: none;
 }
 
@@ -88,50 +88,54 @@ html, body {
 button span {
     color: #FAF8FF;
     font-size: 1rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.0313rem;
     font-weight: bold;
+}
+
+.cambiarColor {
+    border: 5px solid red;
 }
 
 
 .form-registration {
     width: 96.5%;
-    height: 545px;
+    height: 34.0625rem;
     background: #FFFFFF;
     border-radius: 10px;
-    box-shadow: 0px 8px 0px #DB6767;
+    box-shadow: 0px 0.5rem 0px #DB6767;
     box-sizing: border-box;
 }
 
 .form-registration form {
     width: 100%;
-    height: 380px;
+    height: 23.75rem;
 }
 
-.form-registration form .icon {
+.form-registration form .area-error {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
 }
 
-.icon {
+.area-error {
     position: relative;
 }
-.icon i {
+.area-error i {
     position: absolute;
     color: var(--input-error);
-    font-size: 27px;
-    bottom: 18px;
-    right: 55px;
+    font-size: 1.6875rem;
+    bottom: 1.125rem;
+    right: 3.4375rem;
 } 
 
-.icon p {
+.area-error p {
     position: absolute;
     text-align: right;
     margin: 0;
     color: var(--input-error);
-    bottom: -17px;
-    right: 30px;
+    bottom: -1.0625rem;
+    right: 1.875rem;
     font-size: 0.65rem;
     font-weight: 600;
     font-style: italic;
@@ -140,24 +144,24 @@ button span {
 
 form input {
     width: 82%;
-    height: 55px;
-    padding-left: 35px;
-    margin-top: 40px;
+    height: 3.4375rem;
+    padding-left: 2.1875rem;
+    margin-top: 2.5rem;
     color: var(--input);
     font-weight: bold;
     font-size: 0.9rem;
     border-radius: 5px;
-    border: 1.5px solid #D18E8D;
+    border: 0.1125rem solid #D18E8D;
     outline: none;
 }
 
 form div:first-child input {
-    margin-top: 40px;
+    margin-top: 2.5rem;
 }
 
 form input:focus {
     color: var(--input-focus);
-    border: 1.5px solid var(--secondary-button);
+    border: 0.1125rem solid var(--secondary-button);
     transition: all 0.5s;
 }
 
@@ -169,28 +173,28 @@ form input:focus ~ p{
 .form-registration .button-form {
     position: relative;
     width: 89%;
-    height: 55px;
-    margin: 58px auto;
-    margin-bottom: 8px;
+    height: 3.4375rem;
+    margin: 3.625rem auto;
+    margin-bottom: 0.5rem;
     display: block;
     font-size: 0.9rem;
     color: #FAF8FF;
     font-weight:600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.0313rem;
     text-transform: uppercase;
     background: var(--primary-button);
-    border: 0.5px solid rgb(50, 177, 120);
+    border: 0.0313rem solid rgb(50, 177, 120);
     border-radius: 5px;
-    box-shadow: 0px 3px 0px rgb(50, 177, 120);
+    box-shadow: 0px 0.1875rem 0px rgb(50, 177, 120);
     outline: none;
 }
 
 .form-registration .button-form:hover {
     font-weight:bold;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.0313rem;
     background: rgb(49, 173, 117);
-    border: 0.5px solid rgb(43, 160, 107);
-    box-shadow: 0px 3px 0px rgb(55, 195, 132);
+    border: 0.0313rem solid rgb(43, 160, 107);
+    box-shadow: 0px 0.1875rem 0px rgb(55, 195, 132);
     transition: all 2s;
     cursor: pointer;
 }
@@ -237,13 +241,16 @@ p span {
     .registration {
         width: 70%;
     }
-    .icon i {
+    form input {
+        font-size: 0.9rem;
+    }
+    .area-error i {
         position: absolute;
         bottom: 18px;
         right: 70px;
     } 
     
-    .icon p {
+    .area-error p {
         position: absolute;
         bottom: -17px;
         right: 53px;
@@ -261,16 +268,16 @@ p span {
 }
 
 @media screen and (max-width: 940px) {
-    icon i {
+    .area-error i {
         position: absolute;
-        bottom: 18px;
-        right: 20px;
+        bottom: 1.125rem;
+        right: 4.5rem;
     } 
 
-    .icon p {
+    .area-error p {
         position: absolute;
-        bottom: -17px;
-        right: 40px;
+        bottom: -1.0625rem;
+        right: 3.4rem;
     }
     form input {
         width: 74%;
@@ -282,7 +289,18 @@ p span {
 }
 
 
-@media screen and (max-width: 605px) {
+@media screen and (max-width: 700px) {
+    .area-error i {
+        position: absolute;
+        bottom: 1.1rem;
+        right: 5.3rem;
+    } 
+
+    .area-error p {
+        position: absolute;
+        bottom: -1.0625rem;
+        right: 4.2rem;
+    }
     .header {
         width: 85%;
         height: 250px;
@@ -290,13 +308,13 @@ p span {
     }
     .header h1 {
         font-size: 2rem;
-        margin-bottom: 5px;
+        margin-bottom: 0.3125rem;
     }
     .registration {
         width: 85%;
     }
     .form-registration > p {
-        padding: 0 40px;
+        padding: 0 2.5rem;
         font-size: 0.8rem;
     }
     .registration .button-discount,
@@ -318,24 +336,26 @@ p span {
 @media screen and (max-width: 493px) {
     .header {
         width: 90%;
-        height: 350px;
+        height: 21.875rem;
     }
     .header h1 {
         font-size: 2rem;
-        line-height: 40px;
+        line-height: 2.5rem;
     }
     .header p {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
     .registration {
         width: 90%;
     }
     .form-registration > p {
-        padding: 0 40px;
+        padding: 0 2.5rem;
         font-size: 0.6rem;
     }
     form input {
         width: 65%;
+        font-size: 0.8rem;
+        padding-left: 1.2rem;
     }
     .form-registration .button-form {
         position: relative;
@@ -350,14 +370,14 @@ p span {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
     .wrapper{
         margin: 0;
         width: 100vw;
     }
     .header {
         width: 90%;
-        height: 280px;
+        height: 17.5rem;
     }
     .header h1 {
         font-weight: 600;
@@ -365,12 +385,12 @@ p span {
     .header p {
         font-size: 1rem;
         font-weight: 400;
-        letter-spacing: 0.8px;
+        letter-spacing: 0.05rem;
     }
     .registration .button-discount {
-        height: 85px;
-        padding: 0 40px;
-        line-height: 20px;
+        height: 5.3125rem;
+        padding: 0 2.5rem;
+        line-height: 1.25rem;
         font-size: 0.9rem;
         font-weight: 100;
     }
